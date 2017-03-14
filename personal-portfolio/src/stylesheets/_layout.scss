@@ -1,0 +1,66 @@
+/* Site Layout */
+
+html {
+  box-sizing: border-box;
+}
+
+*,
+*:after,
+*:before {
+  box-sizing: inherit;
+}
+
+.content {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+}
+
+.nav-content-fix {
+  height: 4em;
+}
+
+#header {
+  display: flex;
+  justify-content: center;
+  flex: 1;
+
+  background: #006400;
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  z-index: 999;
+}
+
+#about {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+
+  padding: 2em 1em;
+  max-width: 60em;
+}
+
+#portfolio {
+  text-align: center;
+  padding: 2em;
+  max-width: 60em;
+}
+
+#contact {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+
+  padding: 2em;
+  max-width: 60em;
+}
+
+@media (min-width: 55em) {
+  #about {
+    flex-flow: row nowrap;
+  }
+}

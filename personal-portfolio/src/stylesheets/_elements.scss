@@ -1,0 +1,46 @@
+/* HTML elements tweak */
+
+button {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  background: none;
+  outline: 0;
+
+  background: #006400;
+  color: #fff;
+  padding: .5em;
+  border: .125em solid #fff;
+  transition: all .1s;
+
+  &:hover,
+  &:focus {
+    background: #fff;
+    color: #006400;
+    border: .125em solid #006400;
+  }
+
+  &.inverted {
+    background: #fff;
+    color: #006400;
+    border: .125em solid #006400;
+
+    &:hover,
+    &:focus {
+      background: #006400;
+      color: #fff;
+    }
+  }
+}
+
+input,
+textarea {
+  padding: .25em;
+
+  outline-color: #006400;
+}
+
+hr {
+  margin: 0 35%;
+  width: 30%;
+}

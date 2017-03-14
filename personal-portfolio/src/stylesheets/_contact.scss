@@ -1,0 +1,66 @@
+/* Contact section */
+
+.contact-form {
+  display: flex;
+  flex-flow: column nowrap;
+  width: 100%;
+
+  label {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+
+    margin-bottom: 1em;
+
+    span, input, textarea {
+      text-align: center;
+      flex-basis: 100%;
+    }
+
+    span {
+      font-weight: bold;
+      padding: .5em 0;
+    }
+
+    textarea {
+      resize: vertical;
+    }
+  }
+}
+
+.social {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+
+  div {
+    padding: .75em;
+  }
+
+  .twitter {
+    text-align: center;
+  }
+
+  .fcc {
+    a {
+      display: block;
+      width: 5em;
+      height: 5em;
+      padding: .75em;
+      border-radius: 50%;
+      background: #006400;
+      transition: transform .5s;
+
+      &:hover,
+      &:focus {
+        transform: rotate(360deg);
+      }
+
+      img {
+        height: 3.5em;
+        width: 3.5em;
+      }
+    }
+  }
+}

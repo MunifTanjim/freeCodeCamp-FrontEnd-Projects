@@ -1,0 +1,42 @@
+/* About section */
+
+#about:hover {
+  .avatar {
+    transform: rotate(-15deg);
+  }
+}
+
+.introduction {
+  text-align: center;
+  padding-left: 1em;
+  font-size: 1.1em;
+}
+
+.avatar-wrapper {
+  padding: 1em;
+}
+
+.avatar {
+  height: 8em;
+  width: 8em;
+  border-radius: 50%;
+
+  transition: all .3s;
+}
+
+@media (min-width: 35em) {
+  .avatar {
+    height: 12em;
+    width: 12em;
+  }
+
+  .introduction {
+    font-size: 1.25em;
+  }
+}
+
+@media (min-width: 55em) {
+  .introduction {
+    text-align: left;
+  }
+}
