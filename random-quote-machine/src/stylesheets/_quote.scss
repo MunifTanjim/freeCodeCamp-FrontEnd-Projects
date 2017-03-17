@@ -1,0 +1,66 @@
+/* Quote Block */
+
+.quote-wrapper {
+  margin: 1rem;
+  font-size: 1.5em;
+  border-radius: 8px;
+  box-shadow: 0 0 2px 0 rgba(0,0,0,0.75);
+}
+
+.lquo-sign {
+  position: absolute;
+  top: .5em;
+  left: .5em;
+}
+
+.quote {
+  margin: 1em 1em 1em 2.25em;
+  text-align: right;
+
+  footer {
+    font-size: .75em;
+
+    cite:before {
+      content: '\2014';
+      padding-right: 1em;
+    }
+  }
+
+  &.loading {
+    opacity: .5;
+
+    .placeholder {
+      display: block;
+    }
+
+    .author,
+    .quote-body {
+      display: none;
+    }
+  }
+}
+
+.placeholder {
+  display: none;
+
+  span {
+    display: block;
+    height: 1em;
+    margin: .2em 0 0;
+
+    &:last-child {
+      width: 60%;
+      margin-left: auto;
+    }
+
+    &.line-author {
+      display: inline-block;
+      width: 40%;
+    }
+  }
+}
+@media (min-width: 45em) {
+  .quote-wrapper {
+    font-size: 2em;
+  }
+}

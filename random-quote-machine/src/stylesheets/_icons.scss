@@ -1,0 +1,59 @@
+/* Elements */
+
+button {
+  background: none;
+  border: 0;
+  padding: 0;
+}
+
+/* Icons */
+
+.button {
+  width: 3em;
+  height: 3em;
+  overflow: hidden;
+  border-radius: 8px;
+  box-shadow: 0 0 1px 0 rgba(0,0,0,0.75);
+  transition: all .07s;
+  flex-shrink: 0;
+  outline: 0;
+
+  &:focus,
+  &:hover {
+    box-shadow: 0 0 2px 0 rgba(0,0,0,0.75);
+    animation: shake 1.5s linear infinite;
+  }
+
+  &:disabled {
+    opacity: .8;
+    transform: scale(0.9);
+    animation: none;
+  }
+
+  svg {
+    width: 3em;
+    height: 3em;
+  }
+}
+
+svg {
+  &.lquo-sign {
+    width: 1.25em;
+    height: 1.25em;
+  }
+}
+
+@keyframes shake {
+  from {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(-7deg);
+  }
+  75% {
+    transform: rotate(7deg);
+  }
+  to {
+    transform: rotate(0deg);
+  }
+}

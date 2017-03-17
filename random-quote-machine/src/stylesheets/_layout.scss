@@ -1,0 +1,47 @@
+/* Layout */
+
+html {
+  box-sizing: border-box;
+  height: 100%;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 100%;
+  min-height: 100%;
+}
+
+.app {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+
+  max-width: 45em;
+  padding: 1em;
+  width: 100%;
+}
+
+.quote-wrapper {
+  position: relative;
+  width: 100%;
+}
+
+@media (min-width: 35em) {
+  .app {
+    flex-flow: row nowrap;
+  }
+}
+
+@media (min-width: 75em) {
+  .app {
+    max-width: 60em;
+  }
+}

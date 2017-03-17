@@ -1,0 +1,26 @@
+/* Colors */
+
+body {
+  background: #4A148C;
+  transition: background .6s;
+}
+
+.quote-wrapper {
+  background: #FFF;
+}
+
+.quote {
+  color: #4A148C;
+  transition: color .6s;
+}
+
+.icon {
+  fill: #4A148C;
+  transition: fill .6s;
+}
+
+.placeholder {
+  span {
+    background: currentColor;
+  }
+}
