@@ -1,0 +1,158 @@
+@import "layout";
+
+$dark: #212121;
+$light: #FFF;
+
+/* Background */
+
+body {
+  background: url("../images/background.jpg");
+  background-size: cover;
+  color: $dark;
+}
+
+/* Header */
+
+.header {
+  opacity: 0;
+}
+
+.title {
+  font-size: 2em;
+  margin: 0;
+}
+
+/* Weather Block */
+
+.weather-wrapper {
+  &:before {
+    background: $dark;
+  }
+}
+
+.weather {
+  color: $light;
+}
+
+.place {
+  font-size: 2.2em;
+
+  span {
+    &:last-of-type {
+      font-size: 70%;
+    }
+  }
+}
+
+.temperature {
+  border: 0;
+  outline: 0;
+  font-size: 2em;
+  padding: .2em;
+  color: $light;
+  transition: all .07s;
+
+  &:before {
+    background-color: $light;
+    opacity: .1;
+  }
+
+  &:focus,
+  &:hover {
+    cursor: pointer;
+    color: $dark;
+
+    &:before {
+      opacity: .6;
+    }
+  }
+}
+
+.temp-suffix {
+  font-size: 70%;
+}
+
+.icon {
+  &:before {
+    background-color: $light;
+    opacity: .03;
+  }
+}
+
+.status {
+  font-size: 1.2em;
+}
+
+/* Footer */
+
+.footer {
+  text-align: center;
+
+  &:before {
+    background: $light;
+    opacity: .5;
+  }
+
+  a {
+    text-decoration: none;
+    font-weight: bold;
+    color: currentColor;
+  }
+
+}
+
+.heart {
+  &:after {
+    content: '\2665'
+  }
+}
+
+.gear {
+  &:after {
+    content: '\2699'
+  }
+}
+
+/* Loading Indicator */
+
+.loading {
+  & .indicator {
+    display: flex;
+  }
+  .info {
+    display: none;
+  }
+}
+
+.indicator {
+  display: none;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
+  width: 3em;
+}
+
+.bar {
+  width: .8em;
+  height: 3em;
+  background: $light;
+  opacity: .75;
+  animation: loading .3s infinite alternate;
+
+  &:nth-of-type(2) {
+    animation-delay: .1s;
+  }
+
+  &:nth-of-type(3) {
+    animation-delay: .2s;
+  }
+}
+
+@keyframes loading {
+  from {
+    height: 3em;
+  }
+  to {
+    height: 1.5em;
+  }
+}
