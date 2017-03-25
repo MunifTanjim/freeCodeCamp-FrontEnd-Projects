@@ -10,7 +10,7 @@ const definePlugin = new webpack.DefinePlugin({
 })
 
 const htmlWebpack = new HtmlWebpackPlugin({
-  template: path.join(__dirname, 'src', 'index.html')
+  template: path.join(__dirname, 'index.html')
 })
 
 const extractSCSS = new ExtractTextPlugin({
@@ -20,17 +20,17 @@ const extractSCSS = new ExtractTextPlugin({
 
 module.exports = {
   entry: {
-    main: path.join(__dirname, 'src/scripts', 'main.js')
+    main: path.join(__dirname, 'scripts', 'main.js')
   },
   output: {
-    path: path.resolve(__dirname, 'build'),
+    path: path.resolve(__dirname, '../dist/random-quote-machine'),
     filename: '[name].js'
   },
   module: {
     rules: [
       {
         test: /\.html$/,
-        include: path.resolve(__dirname, 'src'),
+        include: path.resolve(__dirname),
         use: {
           loader: 'html-loader',
           options: {
@@ -39,18 +39,18 @@ module.exports = {
         }
       }, {
         test: /\.js$/,
-        include: path.resolve(__dirname, 'src/scripts'),
+        include: path.resolve(__dirname, 'scripts'),
         loader: 'babel-loader'
       }, {
         test: /\.scss$/,
-        include: path.resolve(__dirname, 'src/stylesheets'),
+        include: path.resolve(__dirname, 'stylesheets'),
         loader: extractSCSS.extract({
           fallback: 'style-loader',
           use: ['css-loader', 'sass-loader']
         })
       }, {
         test: /\.svg$/,
-        include: path.resolve(__dirname, 'src/images'),
+        include: path.resolve(__dirname, 'images'),
         loader: 'file-loader'
       }
     ]

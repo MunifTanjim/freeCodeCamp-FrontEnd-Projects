@@ -10,7 +10,7 @@ const definePlugin = new webpack.DefinePlugin({
 })
 
 const htmlWebpack = new HtmlWebpackPlugin({
-  template: path.join(__dirname, 'src', 'index.html')
+  template: path.join(__dirname, 'index.html')
 })
 
 const extractSCSS = new ExtractTextPlugin({
@@ -20,41 +20,38 @@ const extractSCSS = new ExtractTextPlugin({
 
 module.exports = {
   entry: {
-    main: path.join(__dirname, 'src/scripts', 'main.js')
+    main: path.join(__dirname, 'scripts', 'main.js')
   },
   output: {
-    path: path.resolve(__dirname, 'build'),
+    path: path.resolve(__dirname, '../dist/local-weather'),
     filename: '[name].js'
   },
   module: {
     rules: [
       {
         test: /\.html$/,
-        loader: 'html-loader'
+        include: path.resolve(__dirname),
+        use: 'html-loader'
       }, {
         test: /\.js$/,
-        include: path.join(__dirname, 'src/scripts'),
+        include: path.resolve(__dirname, 'scripts'),
         loader: 'babel-loader'
       }, {
         test: /\.scss$/,
-        include: path.resolve(__dirname, 'src/stylesheets'),
+        include: path.resolve(__dirname, 'stylesheets'),
         loader: extractSCSS.extract({
           fallback: 'style-loader',
           use: ['css-loader', 'sass-loader']
         })
       }, {
-        test: /\.(png|jpg)$/,
-        include: path.resolve(__dirname, 'src/images'),
-        loader: 'url-loader'
+        test: /\.jpg$/,
+        include: path.resolve(__dirname, 'images'),
+        loader: 'file-loader'
       }
     ]
   },
   resolve: {
     extensions: ['*', '.js', '.scss']
   },
-  plugins: [
-    definePlugin,
-    htmlWebpack,
-    extractSCSS
-  ]
+  plugins: [definePlugin, htmlWebpack, extractSCSS]
 }

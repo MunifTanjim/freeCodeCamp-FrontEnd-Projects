@@ -10,7 +10,7 @@ const definePlugin = new webpack.DefinePlugin({
 })
 
 const htmlWebpack = new HtmlWebpackPlugin({
-  template: path.join(__dirname, 'src', 'index.html')
+  template: path.join(__dirname, 'index.html')
 })
 
 const extractSCSS = new ExtractTextPlugin({
@@ -18,39 +18,34 @@ const extractSCSS = new ExtractTextPlugin({
   disable: process.env.NODE_ENV === 'development'
 })
 
-const extractCSS = new ExtractTextPlugin({
-  filename: '[name].css',
-  disable: process.env.NODE_ENV === 'development'
-})
-
 module.exports = {
   entry: {
-    main: path.join(__dirname, 'src/scripts', 'main.js')
+    main: path.join(__dirname, 'scripts', 'main.js')
   },
   output: {
-    path: path.resolve(__dirname, 'build'),
+    path: path.resolve(__dirname, '../dist/personal-portfolio'),
     filename: '[name].js'
   },
   module: {
     rules: [
       {
         test: /\.html$/,
-        include: path.resolve(__dirname, 'src'),
-        use: 'html-loader'
+        include: path.resolve(__dirname),
+        loader: 'html-loader'
       }, {
         test: /\.js$/,
-        include: path.resolve(__dirname, 'src/scripts'),
+        include: path.join(__dirname, 'scripts'),
         loader: 'babel-loader'
       }, {
         test: /\.scss$/,
-        include: path.resolve(__dirname, 'src/stylesheets'),
+        include: path.resolve(__dirname, 'stylesheets'),
         loader: extractSCSS.extract({
           fallback: 'style-loader',
           use: ['css-loader', 'sass-loader']
         })
       }, {
-        test: /\.jpg$/,
-        include: path.resolve(__dirname, 'src/images'),
+        test: /\.(png|jpg)$/,
+        include: path.resolve(__dirname, 'images'),
         loader: 'file-loader'
       }
     ]
