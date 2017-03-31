@@ -23,7 +23,7 @@ module.exports = {
     main: path.join(__dirname, 'scripts', 'main.js')
   },
   output: {
-    path: path.resolve(__dirname, '../dist/random-quote-machine'),
+    path: path.resolve(__dirname, '../dist', path.basename(__dirname)),
     filename: '[name].js'
   },
   module: {

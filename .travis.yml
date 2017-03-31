@@ -10,6 +10,6 @@ deploy:
   skip_cleanup: true
   github_token: $GITHUB_TOKEN
   local_dir: dist
-  project_name: freeCodeCamp-FrontEnd-Dev-Projects
+  project_name: freeCodeCamp-FrontEnd-Projects
   on:
     branch: master

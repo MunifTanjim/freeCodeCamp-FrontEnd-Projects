@@ -10,7 +10,7 @@ const definePlugin = new webpack.DefinePlugin({
 })
 
 const htmlWebpack = new HtmlWebpackPlugin({
-  template: path.join(__dirname, 'index.html')
+  template: path.join(__dirname, 'index.pug')
 })
 
 const extractSCSS = new ExtractTextPlugin({
@@ -23,18 +23,18 @@ module.exports = {
     main: path.join(__dirname, 'scripts', 'main.js')
   },
   output: {
-    path: path.resolve(__dirname, '../dist', path.basename(__dirname)),
+    path: path.resolve(__dirname, '../dist'),
     filename: '[name].js'
   },
   module: {
     rules: [
       {
-        test: /\.html$/,
+        test: /\.pug$/,
         include: path.resolve(__dirname),
-        loader: 'html-loader'
+        use: 'pug-loader'
       }, {
         test: /\.js$/,
-        include: path.join(__dirname, 'scripts'),
+        include: path.resolve(__dirname, 'scripts'),
         loader: 'babel-loader'
       }, {
         test: /\.scss$/,
@@ -43,10 +43,6 @@ module.exports = {
           fallback: 'style-loader',
           use: ['css-loader', 'sass-loader']
         })
-      }, {
-        test: /\.(png|jpg)$/,
-        include: path.resolve(__dirname, 'images'),
-        loader: 'file-loader'
       }
     ]
   },

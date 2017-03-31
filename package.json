@@ -1,9 +1,9 @@
 {
-  "name": "freeCodeCamp-FrontEnd-Dev-Projects",
+  "name": "freeCodeCamp-FrontEnd-Projects",
   "version": "0.0.1",
   "description": "(freeCodeCamp) FrontEnd Development Projects",
   "main": "index.js",
-  "repository": "https://github.com/MunifTanjim/freeCodeCamp-FrontEnd-Dev-Projects",
+  "repository": "https://github.com/MunifTanjim/freeCodeCamp-FrontEnd-Projects",
   "author": "MunifTanjim",
   "license": "MIT",
   "scripts": {

@@ -1,0 +1,55 @@
+%flex {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Layout */
+
+html {
+  min-height: 100%;
+
+  @extend %flex;
+}
+
+body {
+  @extend %flex;
+
+  height: 100%;
+  margin: 0;
+}
+
+ul {
+  @extend %flex;
+  flex-flow: row wrap;
+
+  padding: 2em;
+}
+
+li {
+  margin: .625em;
+  text-align: center;
+}
+
+a {
+  display: block;
+  padding: 1em;
+  border: .125em dashed $dark;
+  text-decoration: none;
+  color: $dark;
+  outline: 0;
+  transition: all .2s;
+
+  &:hover,
+  &:focus {
+    border-style: solid;
+    background: $dark;
+    color: $light
+  }
+}
+
+footer {
+  text-align: center;
+  padding: 0 2em 2em;
+}

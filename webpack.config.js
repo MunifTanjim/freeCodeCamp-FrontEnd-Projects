@@ -1,6 +1,5 @@
-const webpack = require('webpack')
 const path = require('path')
-const { find, ls, test } = require('shelljs')
+const { ls, test } = require('shelljs')
 
 const webpackConfigs = []
 
