@@ -1,0 +1,40 @@
+/* Header */
+
+.header {
+  background: $dark;
+  color: $light;
+
+  h1 {
+    span {
+      width: 0.1px;
+      height: 0.1px;
+      opacity: 0;
+      overflow: hidden;
+      position: absolute;
+      z-index: -1;
+    }
+  }
+}
+
+.glitch {
+  width: 2em;
+  height: 2em;
+  margin-right: .75em;
+}
+
+.switchboard {
+  input {
+    & + label {
+      color: $dark;
+      background: $light;
+      text-align: right;
+
+      transition: all .2s;
+    }
+    &:checked + label {
+      font-weight: bold;
+      color: $light;
+      background: $accent;
+    }
+  }
+}

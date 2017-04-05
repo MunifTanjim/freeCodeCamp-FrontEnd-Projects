@@ -1,0 +1,86 @@
+/* Channels */
+
+.channels {
+  width: 100%;
+}
+
+.row {
+  border-top: .125em solid $accent;
+  background: $light;
+
+  &.drunk {
+    order: 999;
+    opacity: .6;
+  }
+
+  &:hover {
+    .logo {
+      transform: rotate(-15deg);
+    }
+  }
+
+  &-head {
+    background: $accent;
+    color: $light;
+    font-weight: bold;
+  }
+}
+
+.show-online {
+  .row[data-status='online'] {
+    order: 0;
+  }
+  .row[data-status='offline'] {
+    order: 27;
+    opacity: .6;
+  }
+}
+
+.show-offline {
+  .row[data-status='offline'] {
+    order: 0;
+  }
+  .row[data-status='online'] {
+    order: 27;
+    opacity: .6;
+  }
+}
+
+.cell {
+  line-height: 2;
+  padding: 0 .5em;
+}
+
+.logo {
+  text-align: center;
+  padding: .5em;
+  transition: all .2s;
+
+  img, .placeholder {
+    display: block;
+    width: 3em;
+    height: 3em;
+    border-radius: 50%;
+  }
+  .placeholder {
+    background: #BBB;
+  }
+}
+
+.game {
+  font-weight: bold;
+}
+
+.nonexist {
+  text-align: center;
+}
+
+.wrap {
+  text-align: center;
+}
+
+@media (min-width: 45em) {
+  .wrap {
+    text-align: left;
+  }
+}

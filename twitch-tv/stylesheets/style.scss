@@ -1,0 +1,21 @@
+$accent: #6441A4;
+$dark: #212121;
+$light: #EEE;
+
+@import "layout";
+@import "elements";
+@import "header";
+@import "channels";
+
+/* Others */
+
+body {
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  background: $dark;
+  color: $dark;
+}
+
+.wrapper {
+  box-shadow: 0 0 .125em .25em $accent;
+  border: .125em solid $accent;
+}

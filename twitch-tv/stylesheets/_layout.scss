@@ -1,0 +1,124 @@
+%flex {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Layout */
+
+html {
+  box-sizing: border-box;
+  min-height: 100%;
+
+  @extend %flex;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+body {
+  @extend %flex;
+
+  width: 100%;
+  height: 100%;
+  margin: 0;
+}
+
+.app {
+  width: 100%;
+  padding: 1em;
+  min-width: 20em;
+  max-width: 60em;
+}
+
+.header {
+  @extend %flex;
+  flex-flow: row nowrap;
+  justify-content: flex-start;
+
+  position: relative;
+  padding: 1em;
+  padding-right: 6em;
+}
+
+.switchboard {
+  @extend %flex;
+  align-items: flex-end;
+
+  position: absolute;
+  right: 0;
+
+  input {
+    & + label {
+      width: 5em;
+      padding: 0 .5em;
+      line-height: 1.8;
+    }
+
+    &:focus + label,
+    & + label:hover {
+      width: 6em;
+    }
+
+    &:checked + label {
+      width: 5.5em;
+    }
+
+    &:focus:checked + label,
+    &:checked + label:hover {
+      width: 6em;
+    }
+  }
+}
+
+/* Flex Table */
+
+.table {
+  @extend %flex;
+  align-items: stretch;
+}
+
+.row {
+  @extend %flex;
+  flex-flow: row nowrap;
+
+  &-head {
+    @extend %flex;
+    flex-flow: row nowrap;
+  }
+}
+
+.cell {
+  flex: 1;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+
+  &.logo {
+    flex: 0 0 4em;
+  }
+
+  &.status {
+    flex: 2;
+  }
+
+  &.nonexist {
+    flex: 3;
+  }
+}
+
+.wrap {
+  @extend %flex;
+  align-items: stretch;
+  flex: 3;
+
+  overflow: hidden;
+}
+
+@media (min-width: 45em) {
+  .wrap {
+    flex-flow: row nowrap;
+  }
+}

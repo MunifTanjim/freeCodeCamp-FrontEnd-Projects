@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset='utf-8'>
+  <meta name='viewport' content='width=device-width, initial-scale=1'>
+  <title>Twitch.tv Tracker</title>
+</head>
+
+<body>
+  <div class='app'>
+    <div class='wrapper'>
+      <header class='header'>
+        <svg class='glitch'>
+          <use href='./images/twitch.svg#glitch'></use>
+        </svg>
+        <h1>
+          <span>Twitch.tv </span>Tracker
+        </h1>
+        <form class='switchboard' name='switchboard'>
+          <input id='all' type='radio' name='status' checked>
+          <label for='all'>All</label>
+          <input id='online' type='radio' name='status'>
+          <label for='online'>Online</label>
+          <input id='offline' type='radio' name='status'>
+          <label for='offline'>Offline</label>
+        </form>
+      </header>
+      <section class="table channels">
+        <div class="row-head">
+          <div class="cell logo">#</div>
+          <div class="cell name">Name</div>
+          <div class="wrap">
+            <div class="cell game">Game</div>
+            <div class="cell status">Status</div>
+          </div>
+        </div>
+      </section>
+    </div>
+  </div>
+</body>
+
+</html>
