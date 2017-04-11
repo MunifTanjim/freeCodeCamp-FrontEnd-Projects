@@ -1,0 +1,24 @@
+/* Typography */
+
+body,
+button,
+html {
+  font-family: 'Ubuntu Mono', 'Liberation Mono', 'Lucida Console', monospace;
+  font-size: 20px;
+}
+
+.current {
+  @include fontSize(2);
+}
+
+.buttons {
+  button {
+    @include fontSize(1.5);
+  }
+}
+
+.functions {
+  button {
+    @include fontSize(1.2);
+  }
+}

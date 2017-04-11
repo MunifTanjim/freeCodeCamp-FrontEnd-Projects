@@ -1,0 +1,60 @@
+/* Buttons */
+
+.buttons {
+  button {
+    background: none;
+    border: 0;
+    padding: 0;
+    outline: 0;
+
+    @extend %pseudoBackground;
+
+    &:before {
+      border-radius: 50%;
+    }
+  }
+}
+
+.keypad {
+  @extend %pseudoBackground;
+}
+
+.functions {
+  @extend %pseudoBackground;
+}
+
+/* Animations */
+
+.tap {
+  &-dark {
+    &:before {
+      animation: feedback-dark .3s cubic-bezier(0.55, 0.06, 0.68, 0.19);
+    }
+  }
+
+  &-light {
+    &:before {
+      animation: feedback-light .3s cubic-bezier(0.55, 0.06, 0.68, 0.19);
+    }
+  }
+}
+
+@keyframes feedback-dark {
+  from {
+    background: $darkGreyFeedback;
+  }
+
+  to {
+    transform: scale(1.2);
+  }
+}
+
+@keyframes feedback-light {
+  from {
+    background: $lightGreyFeedback;
+  }
+
+  to {
+    transform: scale(1.2);
+  }
+}

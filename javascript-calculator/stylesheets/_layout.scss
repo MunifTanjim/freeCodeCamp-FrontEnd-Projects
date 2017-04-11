@@ -1,0 +1,77 @@
+/* Layout */
+
+html {
+  @extend %flex;
+
+  box-sizing: border-box;
+  min-height: 100%;
+}
+
+*,
+*:after,
+*:before {
+  box-sizing: inherit;
+}
+
+body {
+  @extend %flex;
+
+  margin: 0;
+}
+
+.calculator {
+  @include card(5);
+}
+
+.display {
+  @extend %flex;
+  justify-content: space-around;
+  align-items: flex-end;
+
+  @include card(4);
+  height: 7rem;
+  padding: 1rem;
+}
+
+.current,
+.log {
+  @extend %flex;
+}
+
+.buttons {
+  @extend %flex;
+  flex-flow: row nowrap;
+  align-items: stretch;
+
+  @include card(3);
+
+  button {
+    padding: .5rem;
+  }
+}
+
+.keypad {
+  @extend %flex;
+  flex-flow: row wrap;
+
+  @include card(1);
+  padding: .5rem;
+  width: 13rem;
+
+  button {
+    width: 4rem;
+    height: 4rem;
+  }
+}
+
+.functions {
+  @extend %flex;
+
+  @include card(2);
+  padding: 0.25rem;
+
+  button {
+    width: 3.2rem;
+    height: 3.2rem;
+  }
+}

@@ -1,0 +1,27 @@
+/* Colors */
+
+body {
+  background: $offWhite;
+}
+
+.display {
+  background: $white;
+}
+
+.buttons {
+  button {
+    color: $white;
+  }
+}
+
+.keypad {
+  &:before {
+    background: $darkGrey;
+  }
+}
+
+.functions {
+  &:before {
+    background: $lightGrey;
+  }
+}
