@@ -1,0 +1,76 @@
+/* Control Styles */
+
+.control-block {
+  margin: 0 1em;
+
+  p {
+    text-transform: uppercase;
+  }
+}
+
+.button {
+  width: 3em;
+  height: 3em;
+  border-radius: 50%;
+  overflow: hidden;
+
+  svg {
+    width: 100%;
+    height: 100%;
+
+    &.reset {
+      padding-bottom: .25em;
+    }
+
+    &.play {
+      padding-left: .25em;
+    }
+
+    &.pause {
+      padding-left: .125em;
+    }
+  }
+}
+
+.pomodoro {
+  .play {
+    display: block;
+  }
+
+  .pause {
+    display: none;
+  }
+
+  &.break,
+  &.session {
+    .play {
+      display: none;
+    }
+
+    &.paused {
+      .play {
+        display: block;
+      }
+    }
+
+    &:not(.paused) {
+      .pause {
+        display: block;
+      }
+    }
+  }
+}
+
+.control {
+  button {
+    width: 1.5em;
+    height: 1.5em;
+    border-radius: 50%;
+    transition: all .1s;
+    font-size: 1.5em;
+  }
+
+  span {
+    padding: 0 1em;
+  }
+}

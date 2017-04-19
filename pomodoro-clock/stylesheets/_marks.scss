@@ -1,0 +1,6 @@
+/* Pomodoro Cycle Marks */
+
+.mark {
+  @include sphere(2);
+  transition: background .7s;
+}

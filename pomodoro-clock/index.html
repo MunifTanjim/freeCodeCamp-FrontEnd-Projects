@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset='utf-8'>
+  <meta name='viewport' content='width=device-width, initial-scale=1'>
+  <title>Pomodoro Clock</title>
+</head>
+
+<body>
+  <div class='pomodoro'>
+    <div class='controls'>
+      <div class='control-block'>
+        <button class='button reset-clock'>
+          <svg class='reset'>
+            <use href='./images/sprites.svg#reset'></use>
+          </svg>
+        </button>
+      </div>
+      <div class='cycle control-block'>
+        <p>Pomodoro Cycle</p>
+        <div class='control'>
+          <button data-name='cycle' data-op='-'>-</button>
+          <span></span>
+          <button data-name='cycle' data-op='+'>+</button>
+        </div>
+      </div>
+      <div class='control-block'>
+        <button class='button play-pause'>
+          <svg class='pause'>
+            <use href='./images/sprites.svg#pause'></use>
+          </svg>
+          <svg class='play'>
+            <use href='./images/sprites.svg#play'></use>
+          </svg>
+        </svg>
+        </button>
+      </div>
+    </div>
+    <div class='clock'>
+      <div class='sphere'>
+        <div class='liquid'>
+          <svg viewBox='0 0 300 300'>
+            <path id='wave' d='M300,300V2.5c0,0-0.6-0.1-1.1-0.1c0,0-25.5-2.3-40.5-2.4c-15,0-40.6,2.4-40.6,2.4 c-12.3,1.1-30.3,1.8-31.9,1.9c-2-0.1-19.7-0.8-32-1.9c0,0-25.8-2.3-40.8-2.4c-15,0-40.8,2.4-40.8,2.4c-12.3,1.1-30.4,1.8-32,1.9 c-2-0.1-20-0.8-32.2-1.9c0,0-3.1-0.3-8.1-0.7V300H300z'/>
+          </svg>
+        </div>
+      </div>
+    </div>
+    <div class='marks-block'></div>
+    <div class='controls duration-controls'>
+      <div class='break-length control-block'>
+        <p>Break Length</p>
+        <div class='control'>
+          <button data-name='break' data-op='-'>-</button>
+          <span></span>
+          <button data-name='break' data-op='+'>+</button>
+        </div>
+      </div>
+      <div class='session-length control-block'>
+        <p>Session Length</p>
+        <div class='control'>
+          <button data-name='session' data-op='-'>-</button>
+          <span></span>
+          <button data-name='session' data-op='+'>+</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>

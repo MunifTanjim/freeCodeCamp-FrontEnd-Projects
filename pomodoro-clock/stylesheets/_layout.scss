@@ -1,0 +1,56 @@
+/* Layout */
+
+html {
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+html {
+  @extend %flex;
+
+  min-height: 100%;
+}
+
+body {
+  @extend %flex;
+
+  margin: 0;
+}
+
+.pomodoro {
+  @extend %flex;
+}
+
+.marks-block {
+  @extend %flex;
+  flex-flow: row wrap;
+
+  margin-bottom: 1em;
+}
+
+.clock {
+  margin: 1em 2em;
+}
+
+.controls {
+  @extend %flex;
+  flex-direction: row;
+}
+
+.control-block {
+  @extend %flex;
+}
+
+.control {
+  @extend %flex;
+  flex-flow: row nowrap;
+}
+
+.mark {
+  margin: .5em;
+}

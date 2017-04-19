@@ -1,0 +1,59 @@
+/* Colors */
+
+body {
+  background: $dark;
+}
+
+.controls {
+  color: $light;
+}
+
+.button {
+  color: $light;
+
+  &:focus,
+  &:hover {
+    background: $light;
+    color: $dark;
+  }
+}
+
+.control {
+  button {
+    color: $light;
+
+    &:focus,
+    &:hover {
+      background: $light;
+      color: $dark;
+    }
+  }
+}
+
+.clock {
+  background: $glass;
+}
+
+.liquid {
+  color: $blue;
+}
+
+.break {
+  .liquid {
+    color: $red;
+  }
+}
+
+.paused {
+  .liquid {
+    color: $black;
+  }
+}
+
+.mark {
+  background: $glass;
+
+  &[data-status] {
+    background: $red;
+  }
+}

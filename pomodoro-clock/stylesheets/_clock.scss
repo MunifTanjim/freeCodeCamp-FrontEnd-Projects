@@ -1,0 +1,76 @@
+/* Clock */
+
+.clock {
+  @include sphere(16);
+}
+
+.sphere {
+  .liquid {
+    animation-timing-function: cubic-bezier(.3, .5, .6, .4);
+    animation-fill-mode: forwards;
+    transform: translate(0, 50%);
+
+    transition: color 1s;
+  }
+
+  svg {
+    height: 32em;
+    width: 32em;
+  }
+
+  #wave {
+    animation-name: waveAction;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    animation-duration: .5s;
+    width: 32em;
+    height: 16em;
+    fill: currentColor;
+  }
+}
+
+.session {
+  .liquid {
+    animation-name: fillAction;
+  }
+}
+
+.break {
+  .liquid {
+    animation-name: drainAction;
+  }
+}
+
+.paused {
+  .liquid {
+    animation-play-state: paused;
+  }
+}
+
+@keyframes fillAction {
+  0% {
+    transform: translate(0, 50%);
+  }
+
+  100% {
+    transform: translate(0, -10px);
+  }
+}
+@keyframes drainAction {
+  0% {
+    transform: translate(0, -10px);
+  }
+
+  100% {
+    transform: translate(0, 50%);
+  }
+}
+@keyframes waveAction {
+  0% {
+    transform: translate(-50%, 0);
+  }
+
+  100% {
+    transform: translate(0, 0);
+  }
+}
