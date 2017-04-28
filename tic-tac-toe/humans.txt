@@ -1,0 +1,14 @@
+/* DEVELOPER */
+Title: Munif Tanjim
+Site: https://muniftanjim.com
+Twitter: @MunifTanjim
+Location: Bangladesh
+
+/* THANKS */
+Name: Mostafa Samir (for implementing MiniMax in JS)
+URL: https://mostafa-samir.github.io/Tic-Tac-Toe-AI/
+
+/* SITE */
+Standards: HTML5, CSS3
+Components: babel, pug, sass, webpack
+Software: Atom

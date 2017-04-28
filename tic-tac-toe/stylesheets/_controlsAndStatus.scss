@@ -1,0 +1,45 @@
+/* Controls & Status */
+
+.status {
+  span {
+    display: none;
+  }
+}
+
+.controls {
+  form {
+    display: none;
+  }
+}
+
+button#restart {
+  span {
+    display: none;
+  }
+}
+
+$configOptions: difficulty, symbols, finish;
+@each $option in $configOptions {
+  .#{$option} {
+    form.#{$option}-setup {
+      display: flex;
+    }
+
+    span.#{$option}-setup {
+      display: block;
+    }
+  }
+}
+
+$gameStatus: human, robot, won, lost, draw;
+@each $status in $gameStatus {
+  ##{$status} {
+    form.#{$status} {
+      display: flex;
+    }
+
+    span.#{$status} {
+      display: block;
+    }
+  }
+}

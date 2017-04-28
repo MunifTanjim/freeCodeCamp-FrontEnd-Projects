@@ -1,0 +1,34 @@
+doctype html
+html
+  head
+    meta(charset='utf-8')
+    meta(name='viewport', content='width=device-width, initial-scale=1')
+    link(rel='author', href='humans.txt')
+    title Tic Tac Toe
+  body
+    #ttt
+      .status
+        span.difficulty-setup Select Difficulty Level
+        span.symbols-setup Select Your Symbol
+        span.finish-setup Ready?
+        span.human It&apos;s Your Turn
+        span.robot Opponent is Thinking...
+        span.won Congratulation, You Won!
+        span.lost You Lost
+        span.draw It&apos;s a Draw!
+      canvas#board(width='320', height='320')
+      .controls
+        form.difficulty-setup(name='difficulty')
+          button#blind Easy
+          button#novice Normal
+          button#master Expert
+        form.symbols-setup(name='symbols')
+          button#X X
+          button#O O
+        form.finish-setup(name='start')
+          button#start Start
+        form.won.lost.draw(name='restart')
+          button#restart
+            span.lost Try Again?
+            span.won Play Again!
+            span.draw Restart!

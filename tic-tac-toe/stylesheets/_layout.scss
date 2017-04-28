@@ -1,0 +1,49 @@
+/* Layout */
+
+html {
+  box-sizing: border-box;
+  @extend %flex;
+
+  min-height: 100%;
+}
+
+*,
+*:after,
+*:before {
+  box-sizing: inherit;
+}
+
+body {
+  @extend %flex;
+
+  margin: 0;
+}
+
+#ttt {
+  @extend %flex;
+
+  min-width: 20em;
+}
+
+.status {
+  @extend %flex;
+  flex-basis: 1.75em;
+
+  margin: 1em;
+}
+
+.controls {
+  @extend %flex;
+  flex-basis: 3.5em;
+
+  margin: 1em;
+
+  form {
+    @extend %flex;
+    flex-flow: row nowrap;
+
+    button {
+      margin: -.0625em;
+    }
+  }
+}

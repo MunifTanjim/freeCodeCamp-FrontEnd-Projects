@@ -1,0 +1,35 @@
+@import "sugar";
+@import "layout";
+@import "typography";
+
+button {
+  color: $dark;
+  background: $light;
+  padding: .75em 1.5em;
+  border: .125em dashed $dark;
+
+  outline: 0;
+
+  &:hover {
+    color: $light;
+    background: $dark;
+    z-index: 99;
+  }
+
+  &:focus {
+    border-style: solid;
+    z-index: 99;
+  }
+}
+
+#board {
+  display: none;
+}
+
+.game {
+  #board {
+    display: block;
+  }
+}
+
+@import "controlsAndStatus";
