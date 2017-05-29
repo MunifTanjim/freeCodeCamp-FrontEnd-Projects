@@ -1,0 +1,44 @@
+doctype html
+html
+  head
+    meta(charset='utf-8')
+    meta(name='viewport', content='width=device-width, initial-scale=1')
+    title Simon Game
+  body
+    .power
+      label(for='power') Power
+      button#power
+        svg.off
+          use(href='#toggle-left')
+        svg.on
+          use(href='#toggle-right')
+    section.simon-board
+      .green.tap(data-index='0')
+      .red.tap(data-index='1')
+      .counter
+        span.off
+      .blue.tap(data-index='2')
+      .yellow.tap(data-index='3')
+    .strict
+      button#strict
+        svg.off
+          use(href='#circle')
+        svg.on
+          use(href='#circle-check')
+      label(for='strict') Strict
+    audio(preload='auto', data-index='0', src='https://s3.amazonaws.com/freecodecamp/simonSound1.mp3')
+    audio(preload='auto', data-index='1', src='https://s3.amazonaws.com/freecodecamp/simonSound2.mp3')
+    audio(preload='auto', data-index='2', src='https://s3.amazonaws.com/freecodecamp/simonSound3.mp3')
+    audio(preload='auto', data-index='3', src='https://s3.amazonaws.com/freecodecamp/simonSound4.mp3')
+    svg(xmlns='http://www.w3.org/2000/svg', style='display: none')
+      symbol#circle(viewbox='0 0 24 24', stroke-width='2', stroke-linecap='round', stroke-linejoin='round')
+        circle(cx='12', cy='12', r='10')
+      symbol#circle-check(viewbox='0 0 24 24', stroke-width='2', stroke-linecap='round', stroke-linejoin='round')
+        path(d='M22,11.07q0,.46,0,.93a10,10,0,1,1-5.93-9.14')
+        polyline(points='23 3 12 14 9 11')
+      symbol#toggle-left(viewbox='0 0 24 24', stroke-width='2', stroke-linecap='round', stroke-linejoin='round')
+        rect(x='1', y='5', width='22', height='14', rx='7', ry='7')
+        circle(cx='8', cy='12', r='3')
+      symbol#toggle-right(viewbox='0 0 24 24', stroke-width='2', stroke-linecap='round', stroke-linejoin='round')
+        rect(x='1', y='5', width='22', height='14', rx='7', ry='7')
+        circle(cx='16', cy='12', r='3')

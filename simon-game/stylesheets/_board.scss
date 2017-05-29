@@ -1,0 +1,50 @@
+/* Board */
+
+.simon-board {
+  width: 20em;
+  height: 20em;
+  position: relative;
+  border-radius: 50%;
+  overflow: hidden;
+  margin: 2em;
+}
+
+.tap {
+  width: 8em;
+  height: 8em;
+  position: absolute;
+  border-radius: 21%;
+  opacity: .6;
+
+  &.active {
+    opacity: .8;
+  }
+
+  &.green {
+    background: $green;
+    top: 0;
+    left: 50%;
+    margin-left: -4em;
+  }
+
+  &.red {
+    background: $red;
+    right: 0;
+    top: 50%;
+    margin-top: -4em;
+  }
+
+  &.blue {
+    background: $blue;
+    bottom: 0;
+    right: 50%;
+    margin-right: -4em;
+  }
+
+  &.yellow {
+    background: $yellow;
+    left: 0;
+    bottom: 50%;
+    margin-bottom: -4em;
+  }
+}

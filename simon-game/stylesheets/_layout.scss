@@ -1,0 +1,35 @@
+/* Layout */
+
+%flex {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+}
+
+html {
+  @extend %flex;
+  box-sizing: border-box;
+
+  min-height: 100%;
+}
+
+*,
+*:after,
+*:before {
+  box-sizing: inherit;
+}
+
+body {
+  @extend %flex;
+}
+
+.power,
+.strict {
+  @extend %flex;
+}
+
+.counter {
+  @extend %flex;
+  flex-flow: row nowrap;
+}

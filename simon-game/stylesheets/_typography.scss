@@ -1,0 +1,20 @@
+/* Typography */
+
+body {
+  font-family: monospace;
+  font-size: 16px;
+}
+
+.power,
+.strict {
+  label {
+    font-size: .6em;
+    text-transform: uppercase;
+  }
+}
+
+.counter {
+  span {
+    font-size: 1.5em;
+  }
+}

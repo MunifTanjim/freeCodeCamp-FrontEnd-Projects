@@ -1,0 +1,24 @@
+/* Display Counter */
+
+.counter {
+  width: 4em;
+  height: 4em;
+  position: absolute;
+  top: 50%;
+  margin-top: -2em;
+  left: 50%;
+  margin-left: -2em;
+
+  span {
+    opacity: .6;
+    color: $red;
+
+    &.off {
+      color: grey;
+    }
+
+    &.changing {
+      opacity: 1;
+    }
+  }
+}
